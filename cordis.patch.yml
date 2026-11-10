@@ -1,0 +1,8 @@
+# dsh-skill-manager bundle patch: inserts the dual-face plugin row into the
+# profile roster. The node half (exports ".") registers the skill-management API
+# routes on the host web server; the `dsh.client` declaration in package.json
+# makes the browser half (exports "./client") load as a Web GUI plugin that owns
+# the "技能管理" sidebar entry (order 5, right below 插件) and its main panel.
+- insert:
+    - id: skill-manager
+      name: 'dsh-skill-manager'

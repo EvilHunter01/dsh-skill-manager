@@ -1,0 +1,57 @@
+{
+  "name": "dsh-skill-manager",
+  "version": "0.1.0",
+  "description": "Skill manager for the DeepSeek Harness GUI: a sidebar entry below Plugins that lists every on-disk skill, shows its SKILL.md read-only, and opens a new conversation that uses the selected skill. New skills are created in a skill library directory (E:\\dsh-skills by default).",
+  "type": "module",
+  "main": "lib/index.js",
+  "author": "zhoushengbo",
+  "license": "MIT",
+  "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvilHunter01/dsh-skill-manager.git"
+  },
+  "homepage": "https://github.com/EvilHunter01/dsh-skill-manager#readme",
+  "keywords": [
+    "deepseek",
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "plugin",
+    "skill",
+    "skills",
+    "web-ui"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "files": [
+    "lib",
+    "docs",
+    "locale",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "icon.svg"
+  ],
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [],
+      "external": []
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Skill manager",
+    "description": "Adds a Skill manager entry below Plugins: lists every on-disk skill, shows its SKILL.md read-only, and starts a new conversation that uses the selected skill."
+  }
+}
